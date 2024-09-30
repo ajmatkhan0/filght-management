@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Ticket Booking</title>
+    <style>
+        :root {
+            
+            --text-color: #2c3e50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+      body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-image: url("airlinesqq.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding: 20px;
+        }
+
+
+        .container {
+            position: absolute; 
+                left: 50%;  
+                top: 50%;   
+                transform: translate(-50%, -50%);
+                max-width: 600px;
+                margin: 0 auto;
+
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 600px) {
+            .row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Airline C</h1>
+        <form action="airline_bservlet" method="get">
+            <div class="row">
+                <div class="form-group">
+                    <label for="from">Passenger name</label>
+                    <input type="text" id="pname" name="pname" required>
+                </div>
+                <div class="form-group">
+                    <label for="to">Passport no</label>
+                    <input type="text" id="pno" name="pno" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="from">Age</label>
+                    <input type="text" id="age" name="age" required>
+                </div>
+                <div class="form-group">
+                <label for="class">Class</label>
+                <select id="class" name="class" required>
+                      <option value="economy">Economy   ($600)</option>
+                    <option value="business">Business   ($800)</option>
+                    <option value="first">First Class   ($700)</option>
+                </select>
+            </div>
+            </div>
+           
+            
+            <input type="submit" value="Book Flight">
+        </form>
+    </div>
+</body>
+</html>

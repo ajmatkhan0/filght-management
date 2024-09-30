@@ -1,0 +1,170 @@
+*{
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    background-image: url(att.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjusts the image to cover the full viewport */
+}
+
+.container {
+    position: absolute; /* Absolute positioning for precise placement */
+    left: 50%;  /* Center horizontally */
+    top: 50%;   /* Center vertically */
+    transform: translate(-50%, -50%); /* Center correction */
+    width: 500px; /* Set fixed width */
+    height: auto; /* Let height adjust based on content */
+}
+#img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img img {
+    height: 30%;
+    width: 20%;
+}
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input,
+select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: none;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    width: 100px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 92.5%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-container input:focus {
+    outline: none;
+}
+
+.input-container .toggle-visibility {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#message {
+    display: none;
+    background-color: #f1f1f1;
+    color: #000;
+    position: absolute;
+    z-index: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    top: 110%;
+}
+
+#message h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#message ul {
+    list-style: none;
+    padding: 0;
+}
+
+#message ul li {
+    font-size: 14px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+#message ul li i {
+    margin-right: 10px;
+}
+
+.invalid {
+    color: red;
+}
+
+.valid {
+    color: green;
+}
+
+input.invalid {
+    border-color: red;
+    box-shadow: 0 0 5px red;
+}
+
+input.valid {
+    border-color: green;
+    box-shadow: 0 0 5px green;
+}
